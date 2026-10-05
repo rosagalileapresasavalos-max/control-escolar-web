@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="theme-color"
+        content="#172554"
+    >
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+    >
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="Control Escolar"
+    >
+
+    <title>Control Escolar</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json">
+
+    <link
+        rel="apple-touch-icon"
+        href="icono.png"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         APP
+    ====================================================== -->
+
+    <div id="app">
+
+        <!-- =================================================
+             PANTALLA DE INICIO
+        ================================================== -->
+
+        <section
+            id="pantalla-inicio"
+            class="pantalla activa"
+        >
+
+            <div class="inicio-contenedor">
+
+                <div class="inicio-decoracion">
+                    ✦
+                </div>
+
+                <div class="inicio-icono">
+                    📚
+                </div>
+
+                <h1>
+                    CONTROL<br>
+                    ESCOLAR
+                </h1>
+
+                <p class="subtitulo">
+                    Centro de Gestión Académica
+                </p>
+
+                <button
+                    class="boton boton-principal"
+                    onclick="mostrarLogin()"
+                >
+                    ACCEDER AL SISTEMA
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PANTALLA DE LOGIN
+        ================================================== -->
+
+        <section
+            id="pantalla-login"
+            class="pantalla"
+        >
+
+            <div class="login-contenedor">
+
+                <div class="login-icono">
+                    🔐
+                </div>
+
+                <h2>
+                    ACCESO
+                </h2>
+
+                <p>
+                    Código de acceso para continuar
+                </p>
+
+                <input
+                    type="password"
+                    id="campo-pin"
+                    class="campo-pin"
+                    placeholder="Ingresa tu PIN"
+                    maxlength="10"
+                    inputmode="numeric"
+                    autocomplete="off"
+                >
+
+                <button
+                    class="boton boton-principal"
+                    onclick="validarAcceso()"
+                >
+                    VALIDAR ACCESO
+                </button>
+
+                <button
+                    class="boton boton-secundario"
+                    onclick="mostrarInicio()"
+                >
+                    VOLVER
+                </button>
+
+                <p
+                    id="mensaje-login"
+                    class="mensaje-login"
+                ></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MENÚ PRINCIPAL
+        ================================================== -->
+
+        <section
+            id="pantalla-menu"
+            class="pantalla"
+        >
+
+            <div class="menu-contenedor">
+
+                <header class="encabezado">
+
+                    <div>
+                        <h1>
+                            CONTROL ESCOLAR
+                        </h1>
+
+                        <p>
+                            Panel de Control Escolar
+                        </p>
+                    </div>
+
+                    <button
+                        class="boton-salir"
+                        onclick="cerrarSesion()"
+                    >
+                        SALIR
+                    </button>
+
+                </header>
+
+
+                <!-- =========================================
+                     BOTONES DE MÓDULOS
+                ========================================== -->
+
+                <div class="menu-grid">
+
+                    <button
+                        class="tarjeta-menu estudiantes"
+                        onclick="abrirModulo('alumnos')"
+                    >
+                        <span class="numero">
+                            01
+                        </span>
+
+                        <span class="icono">
+                            👩‍🎓
+                        </span>
+
+                        <span class="nombre">
+                            ESTUDIANTES
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="tarjeta-menu docentes"
+                        onclick="abrirModulo('profesores')"
+                    >
+                        <span class="numero">
+                            02
+                        </span>
+
+                        <span class="icono">
+                            👨‍🏫
+                        </span>
+
+                        <span class="nombre">
+                            DOCENTES
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="tarjeta-menu grupos"
+                        onclick="abrirModulo('grupos')"
+                    >
+                        <span class="numero">
+                            03
+                        </span>
+
+                        <span class="icono">
+                            👥
+                        </span>
+
+                        <span class="nombre">
+                            GRUPOS
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="tarjeta-menu materias"
+                        onclick="abrirModulo('materias')"
+                    >
+                        <span class="numero">
+                            04
+                        </span>
+
+                        <span class="icono">
+                            📚
+                        </span>
+
+                        <span class="nombre">
+                            MATERIAS
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="tarjeta-menu calificaciones"
+                        onclick="abrirModulo('calificaciones')"
+                    >
+                        <span class="numero">
+                            05
+                        </span>
+
+                        <span class

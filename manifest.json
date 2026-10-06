@@ -1,0 +1,22 @@
+{
+    "name": "Control Escolar",
+    "short_name": "Control Escolar",
+    "description": "Sistema de Control Escolar",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#172554",
+    "theme_color": "#172554",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "icono.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icono.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
